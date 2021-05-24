@@ -131,7 +131,7 @@ def send_event_as_text_message_view(request):
     auth_token = "twilio_auth_token"
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-        body=f'{appointment.service.service_type} Appointment at Scalp Hair Salon @ { appointment.date }',
+        body=f'{appointment.service.service_type} Appointment at BookMe @ { appointment.date }',
         to=f'+961{customer.phone_number}',
         from_="+12052932763",
     )
@@ -147,7 +147,7 @@ def access_authorization_view(request, flow=FLOW):
     code = request.GET.get('code', None)
     event = {
         'summary': f'{appointment.service.service_type} Appointment',
-        'location': 'Scalp Beauty Salon',
+        'location': 'BookMe',
         'start': {
             'dateTime': f'{appointment_start.year}-{appointment_start.month}-{appointment_start.day}T{appointment_start.hour}:{appointment_start.minute}:{appointment_start.second}',
             'timeZone': 'Asia/Beirut'

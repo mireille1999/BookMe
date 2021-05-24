@@ -65,7 +65,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'social_django',
 ]
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -98,7 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'src.wsgi.application'
+#WSGI_APPLICATION = 'src.wsgi.application'
 
 
 # Database

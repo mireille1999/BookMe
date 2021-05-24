@@ -20,9 +20,9 @@
                     <p class='p-0 m-0'>{{ item.quantity }}x {{ item.product.name }}
                         <span class='pull-right'>
                         {% if item.product.discounted_price %}
-                        {{ item.product.discounted_price }}$ <a class='text-danger' href="{% url 'delete-cart-item' item.product.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        {{ item.product.discounted_price }}K Rwf <a class='text-danger' href="{% url 'delete-cart-item' item.product.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         {% else %}
-                        {{ item.product.price }}$ <a class='text-danger' href="{% url 'delete-cart-item' item.product.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        {{ item.product.price }}K Rwf <a class='text-danger' href="{% url 'delete-cart-item' item.product.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         {% endif %}
                         </span>
                     </p>
@@ -30,7 +30,7 @@
                 <hr class='m-1'>
                 {% endfor %}
                 <div class='card-body'>
-                    <p class='p-0 m-0'><strong>Total Price<span class='pull-right'>{{ cart.total_price }}$</span></strong></p>
+                    <p class='p-0 m-0'><strong>Total Price<span class='pull-right'>{{ cart.total_price }}K Rwf</span></strong></p>
                 </div>
                 <div class='card-body'>
                     <button class='btn btn-primary m-auto d-block rounded'>
